@@ -1,0 +1,37 @@
+/* Author choice composer-019 / focus, receipt 4b3a69e7a373. */
+.feedback-explainer {
+  max-width: 760px;
+  padding: 24px 0 32px;
+  border-top: 1px solid var(--rule);
+}
+.feedback-explainer h2 { margin: 8px 0 16px; }
+.feedback-explainer p { margin: 0 0 16px; }
+.feedback-layout {
+  display: block;
+  margin: 0;
+  max-width: 760px;
+  padding: 0 0 64px;
+  border-top: 0;
+}
+.optional-context {
+  margin-top: 24px;
+  padding: 12px 0;
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+}
+.optional-context > summary {
+  cursor: pointer;
+  min-height: 44px;
+  padding: 12px 0;
+  font: 14px/1.5 var(--mono);
+}
+.optional-context > summary:focus-visible,
+.feedback-form textarea:focus-visible,
+.feedback-form input:focus-visible,
+.feedback-form select:focus-visible {
+  outline: 3px solid var(--orange);
+  outline-offset: 4px;
+}
+@media (max-width: 750px) {
+  .feedback-explainer { padding-top: 16px; }
+}

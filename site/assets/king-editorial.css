@@ -1,0 +1,13 @@
+.king-opening{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px;align-items:center;padding:64px 0 80px}
+.king-opening .article-header{margin-bottom:0}
+.essay .king-opening>figure{margin:0}
+.king-opening img{aspect-ratio:4/3;object-fit:contain}
+.king-prose>.opening{font-size:24px;line-height:32px;letter-spacing:-.025em}
+@media(min-width:1600px){.king-opening{gap:48px}}
+@media(max-width:1100px){.king-opening{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;padding-block:48px 64px}}
+@media(max-width:900px){.king-opening{grid-template-columns:1fr;gap:32px;padding-block:40px 48px}}
+@media print{
+ .king-opening{display:block;padding:0}
+ .essay .king-opening>figure{width:120mm;max-width:100%;margin:24pt auto}
+ .king-prose>.opening{font-size:14pt;line-height:1.5}
+}

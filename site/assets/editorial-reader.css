@@ -1,0 +1,69 @@
+body.editorial-reader{--curve:cubic-bezier(.22,1,.36,1);--serif:Arial,sans-serif;--mono:Arial,sans-serif}
+.editorial-reader .inner{max-width:1440px;padding-inline:48px}
+.editorial-reader .header{max-width:1440px;margin-inline:auto;padding:16px 48px;border:0}
+.editorial-reader .header nav{font-size:12px;gap:24px}
+.editorial-reader .header nav a{display:flex;align-items:center;min-height:44px}
+.editorial-reader .logo{font-size:14px;letter-spacing:-.025em;font-weight:600}
+.editorial-reader .logo img{width:48px}
+.editorial-reader .essay{max-width:none;padding:0}
+.editorial-reader .article-header{padding:0;margin-bottom:32px;max-width:680px}
+.editorial-reader .article-header .overline{font:400 12px/16px Arial,sans-serif;letter-spacing:0;color:var(--soft)}
+.editorial-reader .article-header h1{font:500 60px/1 Arial,sans-serif;letter-spacing:-.065em;max-width:680px;margin:24px 0 0;text-wrap:balance;background:linear-gradient(100deg,#000,#666);background-clip:text;-webkit-text-fill-color:transparent}
+.editorial-reader .article-header>p:not(.byline){font:400 20px/28px Arial,sans-serif;max-width:44ch;margin:24px 0 0;text-wrap:pretty;color:var(--soft)}
+.editorial-reader .article-header .byline{font:400 12px/20px Arial,sans-serif;margin:24px 0 0;color:var(--soft)}
+.article-reading{grid-template-columns:180px minmax(0,680px);justify-content:center;gap:64px;padding-block:48px 64px}
+.article-reading .reader-contents{font-family:Arial,sans-serif}
+.article-reading .reader-contents>summary{font-size:12px;letter-spacing:0}
+.article-reading .toc a{font-size:12px;line-height:20px;padding-block:8px}
+.article-prose{min-width:0}
+.article-prose>p,.article-prose>ol>li,.article-prose>ul>li{font:400 20px/28px Arial,sans-serif;max-width:65ch;text-wrap:pretty}
+.article-prose>p{margin-bottom:24px}
+.article-prose>h2,.editorial-reader .sources>h2{font:500 36px/40px Arial,sans-serif;letter-spacing:-.045em;margin:80px 0 24px;text-wrap:balance;max-width:25ch}
+.article-prose>h2:first-child{margin-top:0}
+.article-prose>p strong,.article-prose>ol strong,.article-prose>blockquote strong{font-weight:650}
+.article-prose>blockquote{padding:0;margin:48px 0;border:0}
+.article-prose>blockquote p{font:500 30px/36px Arial,sans-serif;letter-spacing:-.035em;text-wrap:balance}
+.article-prose>figure{margin:40px 0 48px}
+.article-prose>figure img{max-height:560px;object-fit:contain}
+.article-prose :is(.footnote,.sources) p,.article-prose :is(.footnote,.sources) li{font-size:14px;line-height:24px}
+.article-prose :is(.footnote,.sources) a{overflow-wrap:anywhere}
+.article-prose :is(.footnote,.sources) li{margin-bottom:24px}
+.article-prose .end-response p{font-size:18px;line-height:28px}
+.article-prose>.coda{font-style:normal;color:var(--soft)}
+.article-prose>p em{font-style:normal;font-weight:500}
+.editorial-reader .essay sup{font:500 12px/16px Arial,sans-serif}
+.editorial-reader .essay sup a{color:#a43e20;text-decoration:none}
+.editorial-reader .footer{font:400 12px/20px Arial,sans-serif;padding-block:32px 40px}
+@media(min-width:1600px){.editorial-reader .article-header h1{font-size:72px}}
+@media(max-width:1100px){
+ .editorial-reader .article-header h1{font-size:48px}
+ .article-reading{gap:40px;grid-template-columns:144px minmax(0,680px)}
+}
+@media(max-width:900px){
+ .editorial-reader .article-header h1{font-size:48px;line-height:1;letter-spacing:-.06em;margin-top:16px}
+}
+@media(max-width:750px){
+ .editorial-reader .inner{padding-inline:24px}
+ .editorial-reader .header{padding:8px 24px;align-items:center;gap:16px}
+ .editorial-reader .header nav{gap:12px;font-size:12px}
+ .editorial-reader .header nav a:nth-last-child(-n+2){display:none}
+ .editorial-reader .logo span{display:none}
+ .article-reading{display:block;padding-top:24px}
+ .article-reading .reader-contents{margin-bottom:32px}
+ .article-reading .reader-contents .toc{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+ .article-prose>p,.article-prose>ol>li,.article-prose>ul>li{font-size:18px;line-height:28px}
+ .article-prose>h2,.editorial-reader .sources>h2{font-size:30px;line-height:36px;margin-top:64px}
+ .article-prose>blockquote p{font-size:24px;line-height:32px}
+}
+@media(max-width:450px){.editorial-reader .article-header h1{font-size:36px;line-height:40px;max-width:100%}}
+@media(max-width:360px){
+ .editorial-reader .inner{padding-inline:16px}
+ .editorial-reader .header{padding-inline:16px}
+}
+@media print{
+ .editorial-reader .inner{padding:0}
+ .editorial-reader .article-header h1{font-size:36px;background:none;-webkit-text-fill-color:currentColor}
+ .article-reading{display:block;padding-top:0}
+ .article-prose>p,.article-prose>ol>li,.article-prose>ul>li{font-size:12pt;line-height:1.5}
+ .article-prose :is(.footnote,.sources) p,.article-prose :is(.footnote,.sources) li{font-size:10pt;line-height:1.5}
+}
